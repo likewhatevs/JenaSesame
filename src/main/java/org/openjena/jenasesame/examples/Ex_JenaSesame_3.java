@@ -8,16 +8,16 @@ package org.openjena.jenasesame.examples;
 
 import java.io.IOException;
 
-import org.apache.jena.query.Query;
-import org.apache.jena.query.QueryExecution;
-import org.apache.jena.query.QueryExecutionFactory;
-import org.apache.jena.query.QueryFactory;
-import org.apache.jena.rdf.model.Model;
-import org.apache.jena.sparql.util.QueryExecUtils;
+import com.hp.hpl.jena.query.Query;
+import com.hp.hpl.jena.query.QueryExecution;
+import com.hp.hpl.jena.query.QueryExecutionFactory;
+import com.hp.hpl.jena.query.QueryFactory;
+import com.hp.hpl.jena.rdf.model.Model;
+import com.hp.hpl.jena.sparql.util.QueryExecUtils;
 import org.openjena.jenasesame.JenaSesame;
-import org.openrdf.OpenRDFException;
-import org.openrdf.repository.Repository;
-import org.openrdf.repository.RepositoryConnection;
+import org.eclipse.rdf4j.OpenRDFException;
+import org.eclipse.rdf4j.repository.Repository;
+import org.eclipse.rdf4j.repository.RepositoryConnection;
 
 /** Example: Run a SPARQL query on a Jena model backed by Sesame. Jena SPARQL execution. */
 public class Ex_JenaSesame_3 extends Ex_JenaSesame_1 {

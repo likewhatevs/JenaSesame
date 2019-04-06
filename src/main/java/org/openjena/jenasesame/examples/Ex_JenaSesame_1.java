@@ -10,17 +10,17 @@ import java.io.IOException;
 import java.io.Reader;
 import java.io.StringReader;
 
+import com.hp.hpl.jena.rdf.model.*;
 import org.apache.jena.atlas.lib.StrUtils;
-import org.apache.jena.rdf.model.*;
 import org.apache.jena.riot.Lang;
 import org.apache.jena.riot.RDFDataMgr;
 import org.openjena.jenasesame.JenaSesame;
-import org.openrdf.OpenRDFException;
-import org.openrdf.repository.Repository;
-import org.openrdf.repository.RepositoryConnection;
-import org.openrdf.repository.sail.SailRepository;
-import org.openrdf.rio.RDFFormat;
-import org.openrdf.sail.memory.MemoryStore;
+import org.eclipse.rdf4j.OpenRDFException;
+import org.eclipse.rdf4j.repository.Repository;
+import org.eclipse.rdf4j.repository.RepositoryConnection;
+import org.eclipse.rdf4j.repository.sail.SailRepository;
+import org.eclipse.rdf4j.rio.RDFFormat;
+import org.eclipse.rdf4j.sail.memory.MemoryStore;
 
 /** Example: Create an in-memory Sesame repository, load some RDF, access via Jena API. */
 public class Ex_JenaSesame_1 {

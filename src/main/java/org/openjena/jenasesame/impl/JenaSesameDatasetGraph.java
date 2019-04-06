@@ -9,21 +9,20 @@ package org.openjena.jenasesame.impl;
 
 import java.util.Iterator ;
 
-import org.apache.jena.graph.Graph ;
-import org.apache.jena.graph.Node ;
-import org.apache.jena.shared.Lock ;
-import org.apache.jena.shared.LockMRSW ;
-import org.apache.jena.sparql.ARQException ;
-import org.apache.jena.sparql.core.DatasetGraph ;
-import org.apache.jena.sparql.core.Quad ;
-import org.apache.jena.sparql.core.TransactionalNotSupportedMixin;
-import org.apache.jena.sparql.util.Context ;
-import org.openrdf.model.Resource ;
-import org.openrdf.repository.RepositoryConnection ;
-import org.openrdf.repository.RepositoryException ;
-import org.openrdf.repository.RepositoryResult ;
+import com.hp.hpl.jena.graph.Graph ;
+import com.hp.hpl.jena.graph.Node ;
+import com.hp.hpl.jena.shared.Lock ;
+import com.hp.hpl.jena.shared.LockMRSW ;
+import com.hp.hpl.jena.sparql.ARQException ;
+import com.hp.hpl.jena.sparql.core.DatasetGraph ;
+import com.hp.hpl.jena.sparql.core.Quad ;
+import com.hp.hpl.jena.sparql.util.Context ;
+import org.eclipse.rdf4j.model.Resource ;
+import org.eclipse.rdf4j.repository.RepositoryConnection ;
+import org.eclipse.rdf4j.repository.RepositoryException ;
+import org.eclipse.rdf4j.repository.RepositoryResult ;
 
-public class JenaSesameDatasetGraph implements TransactionalNotSupportedMixin, DatasetGraph {
+public class JenaSesameDatasetGraph implements DatasetGraph {
     private Lock                 lock = new LockMRSW();
     private RepositoryConnection connection;
 
@@ -151,10 +150,6 @@ public class JenaSesameDatasetGraph implements TransactionalNotSupportedMixin, D
     @Override
     public void clear() { deleteAny(null, null, null, null); }
 
-    @Override
-    public boolean supportsTransactions() {
-        return false;
-    }
 }
 
 /*

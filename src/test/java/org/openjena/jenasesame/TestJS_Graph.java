@@ -4,37 +4,36 @@
  * [See end of file]
  */
 
-package org.openjena.jenasesame;
-
-import org.apache.jena.graph.Graph ;
-import org.apache.jena.graph.test.AbstractTestGraph;
-
-public class TestJS_Graph extends AbstractTestGraph {
-    public TestJS_Graph() {
-        super("TestJS_Graph");
-    }
-    
-    @Override
-    public Graph getGraph() {
-        return AbstractTestGraph2.newGraph();
-    }
-    
-    // BNode as predicate (Generalized RDF)
-    @Override public void testContainsConcrete() {
-        return ;
-    }
-    @Override public void testContainsNode() {}
-    
-    // No .remove() on iterator
-    @Override
-    public void testEventDeleteByFind() {}
-    
-    // Includes daml:collection tests which cause warnings.
-    // But this isn't testing the jena-sesame bridge at all so keep a clean output.
-    @Override
-    public void testIsomorphismFile() {}
-
-}
+//package org.openjena.jenasesame;
+//
+//import com.hp.hpl.jena.graph.Graph ;
+//
+//public class TestJS_Graph extends AbstractTestGraph {
+//    public TestJS_Graph() {
+//        super("TestJS_Graph");
+//    }
+//
+//    @Override
+//    public Graph getGraph() {
+//        return AbstractTestGraph2.newGraph();
+//    }
+//
+//    // BNode as predicate (Generalized RDF)
+//    @Override public void testContainsConcrete() {
+//        return ;
+//    }
+//    @Override public void testContainsNode() {}
+//
+//    // No .remove() on iterator
+//    @Override
+//    public void testEventDeleteByFind() {}
+//
+//    // Includes daml:collection tests which cause warnings.
+//    // But this isn't testing the jena-sesame bridge at all so keep a clean output.
+//    @Override
+//    public void testIsomorphismFile() {}
+//
+//}
 
 /*
  * (c) Copyright 2009 Talis Information Ltd.

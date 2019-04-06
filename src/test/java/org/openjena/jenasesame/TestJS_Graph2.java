@@ -6,7 +6,7 @@
 
 package org.openjena.jenasesame;
 
-import org.apache.jena.graph.Graph;
+import com.hp.hpl.jena.graph.Graph;
 
 public class TestJS_Graph2 extends AbstractTestGraph2 {
     @Override

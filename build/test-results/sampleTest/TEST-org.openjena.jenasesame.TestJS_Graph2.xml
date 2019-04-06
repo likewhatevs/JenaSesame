@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.openjena.jenasesame.TestJS_Graph2" tests="16" skipped="0" failures="0" errors="0" timestamp="2019-04-06T02:31:07" hostname="patsomaru-Precision-7520" time="0.334">
+  <properties/>
+  <testcase name="graph_add_find_01" classname="org.openjena.jenasesame.TestJS_Graph2" time="0.179"/>
+  <testcase name="graph_add_find_02" classname="org.openjena.jenasesame.TestJS_Graph2" time="0.002"/>
+  <testcase name="removeAll_01" classname="org.openjena.jenasesame.TestJS_Graph2" time="0.036"/>
+  <testcase name="count_01" classname="org.openjena.jenasesame.TestJS_Graph2" time="0.001"/>
+  <testcase name="graph_add_delete_01" classname="org.openjena.jenasesame.TestJS_Graph2" time="0.01"/>
+  <testcase name="graph_add_delete_02" classname="org.openjena.jenasesame.TestJS_Graph2" time="0.011"/>
+  <testcase name="graph_add_delete_03" classname="org.openjena.jenasesame.TestJS_Graph2" time="0.005"/>
+  <testcase name="graph_add_delete_04" classname="org.openjena.jenasesame.TestJS_Graph2" time="0.005"/>
+  <testcase name="graph_01" classname="org.openjena.jenasesame.TestJS_Graph2" time="0.001"/>
+  <testcase name="remove_01" classname="org.openjena.jenasesame.TestJS_Graph2" time="0.011"/>
+  <testcase name="remove_02" classname="org.openjena.jenasesame.TestJS_Graph2" time="0.011"/>
+  <testcase name="remove_03" classname="org.openjena.jenasesame.TestJS_Graph2" time="0.009"/>
+  <testcase name="graph_add_01" classname="org.openjena.jenasesame.TestJS_Graph2" time="0.002"/>
+  <testcase name="graph_add_02" classname="org.openjena.jenasesame.TestJS_Graph2" time="0.003"/>
+  <testcase name="graph_add_03" classname="org.openjena.jenasesame.TestJS_Graph2" time="0.002"/>
+  <testcase name="graph_add_04" classname="org.openjena.jenasesame.TestJS_Graph2" time="0.02"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

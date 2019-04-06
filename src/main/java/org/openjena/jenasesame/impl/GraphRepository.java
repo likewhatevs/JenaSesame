@@ -6,20 +6,20 @@
 
 package org.openjena.jenasesame.impl;
 
-import org.apache.jena.graph.Capabilities;
-import org.apache.jena.graph.Node;
-import org.apache.jena.graph.Triple;
-import org.apache.jena.graph.impl.AllCapabilities;
-import org.apache.jena.graph.impl.GraphBase;
-import org.apache.jena.shared.JenaException;
-import org.apache.jena.shared.PrefixMapping;
-import org.apache.jena.sparql.core.DatasetPrefixStorage;
-import org.apache.jena.util.iterator.ExtendedIterator;
-import org.apache.jena.util.iterator.NiceIterator;
-import org.openrdf.model.*;
-import org.openrdf.repository.RepositoryConnection;
-import org.openrdf.repository.RepositoryException;
-import org.openrdf.repository.RepositoryResult;
+import com.hp.hpl.jena.graph.Capabilities;
+import com.hp.hpl.jena.graph.Node;
+import com.hp.hpl.jena.graph.Triple;
+import com.hp.hpl.jena.graph.impl.AllCapabilities;
+import com.hp.hpl.jena.graph.impl.GraphBase;
+import com.hp.hpl.jena.shared.JenaException;
+import com.hp.hpl.jena.shared.PrefixMapping;
+import com.hp.hpl.jena.sparql.core.DatasetPrefixStorage;
+import com.hp.hpl.jena.util.iterator.ExtendedIterator;
+import com.hp.hpl.jena.util.iterator.NiceIterator;
+import org.eclipse.rdf4j.model.*;
+import org.eclipse.rdf4j.repository.RepositoryConnection;
+import org.eclipse.rdf4j.repository.RepositoryException;
+import org.eclipse.rdf4j.repository.RepositoryResult;
 
 public class GraphRepository extends GraphBase {
     private RepositoryConnection connection;

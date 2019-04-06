@@ -6,11 +6,11 @@
 
 package org.openjena.jenasesame.impl;
 
-import org.apache.jena.graph.BlankNodeId;
-import org.apache.jena.graph.Node ;
-import org.apache.jena.graph.NodeFactory;
-import org.apache.jena.graph.Triple ;
-import org.openrdf.model.*;
+import com.hp.hpl.jena.graph.Node ;
+import com.hp.hpl.jena.graph.NodeFactory;
+import com.hp.hpl.jena.graph.Triple ;
+import com.hp.hpl.jena.rdf.model.AnonId;
+import org.eclipse.rdf4j.model.*;
 
 class Convert {
     public static Node valueToNode(Value value) {
@@ -24,7 +24,7 @@ class Convert {
     }
 
     public static Node bnodeToNode(BNode value) {
-        return NodeFactory.createBlankNode(new BlankNodeId(value.getID()));
+        return NodeFactory.createAnon(new AnonId(value.getID()));
     }
 
     public static Node uriToNode(URI value) {
@@ -32,8 +32,8 @@ class Convert {
     }
 
     public static Node literalToNode(Literal value) {
-        if ( value.getLanguage() != null )
-            return NodeFactory.createLiteral(value.getLabel(), value.getLanguage(), false);
+        if ( value.getLanguage().isPresent() )
+            return NodeFactory.createLiteral(value.getLabel(), value.getLanguage().get(), false);
         if ( value.getDatatype() != null )
             return NodeFactory.createLiteral(value.getLabel(), null, NodeFactory.getType(value.getDatatype().stringValue()));
         // Plain literal

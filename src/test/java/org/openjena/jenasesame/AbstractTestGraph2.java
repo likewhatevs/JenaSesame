@@ -8,18 +8,18 @@ package org.openjena.jenasesame;
 
 import org.junit.Test ;
 import org.openjena.jenasesame.impl.GraphRepository;
-import org.openrdf.repository.Repository;
-import org.openrdf.repository.RepositoryConnection;
-import org.openrdf.repository.sail.SailRepository;
-import org.openrdf.sail.memory.MemoryStore;
+import org.eclipse.rdf4j.repository.Repository;
+import org.eclipse.rdf4j.repository.RepositoryConnection;
+import org.eclipse.rdf4j.repository.sail.SailRepository;
+import org.eclipse.rdf4j.sail.memory.MemoryStore;
 
 import static org.junit.Assert.*;
 
-import org.apache.jena.graph.Graph ;
-import org.apache.jena.graph.Node ;
-import org.apache.jena.graph.Triple ;
-import org.apache.jena.shared.JenaException;
-import org.apache.jena.sparql.sse.SSE ;
+import com.hp.hpl.jena.graph.Graph ;
+import com.hp.hpl.jena.graph.Node ;
+import com.hp.hpl.jena.graph.Triple ;
+import com.hp.hpl.jena.shared.JenaException;
+import com.hp.hpl.jena.sparql.sse.SSE ;
 
 /** Basic add and delete tests for a graph */
 

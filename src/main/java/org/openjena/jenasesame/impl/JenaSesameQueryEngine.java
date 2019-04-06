@@ -7,23 +7,23 @@
 package org.openjena.jenasesame.impl;
 
 import org.apache.jena.atlas.lib.Closeable;
-import org.openrdf.query.MalformedQueryException;
-import org.openrdf.query.QueryEvaluationException;
-import org.openrdf.query.QueryLanguage;
-import org.openrdf.query.TupleQuery;
-import org.openrdf.query.TupleQueryResult;
-import org.openrdf.repository.RepositoryException;
+import org.eclipse.rdf4j.query.MalformedQueryException;
+import org.eclipse.rdf4j.query.QueryEvaluationException;
+import org.eclipse.rdf4j.query.QueryLanguage;
+import org.eclipse.rdf4j.query.TupleQuery;
+import org.eclipse.rdf4j.query.TupleQueryResult;
+import org.eclipse.rdf4j.repository.RepositoryException;
 
-import org.apache.jena.query.Query;
-import org.apache.jena.sparql.ARQException;
-import org.apache.jena.sparql.algebra.Op;
-import org.apache.jena.sparql.core.DatasetGraph;
-import org.apache.jena.sparql.engine.Plan;
-import org.apache.jena.sparql.engine.PlanBase;
-import org.apache.jena.sparql.engine.QueryEngineBase;
-import org.apache.jena.sparql.engine.QueryIterator;
-import org.apache.jena.sparql.engine.binding.Binding;
-import org.apache.jena.sparql.util.Context;
+import com.hp.hpl.jena.query.Query;
+import com.hp.hpl.jena.sparql.ARQException;
+import com.hp.hpl.jena.sparql.algebra.Op;
+import com.hp.hpl.jena.sparql.core.DatasetGraph;
+import com.hp.hpl.jena.sparql.engine.Plan;
+import com.hp.hpl.jena.sparql.engine.PlanBase;
+import com.hp.hpl.jena.sparql.engine.QueryEngineBase;
+import com.hp.hpl.jena.sparql.engine.QueryIterator;
+import com.hp.hpl.jena.sparql.engine.binding.Binding;
+import com.hp.hpl.jena.sparql.util.Context;
 
 public class JenaSesameQueryEngine extends QueryEngineBase {
     JenaSesameDatasetGraph jsdg;
@@ -72,13 +72,7 @@ public class JenaSesameQueryEngine extends QueryEngineBase {
                 }
             };
         }
-        catch (RepositoryException ex) {
-            throw new ARQException(ex);
-        }
-        catch (MalformedQueryException ex) {
-            throw new ARQException(ex);
-        }
-        catch (QueryEvaluationException ex) {
+        catch (RepositoryException | MalformedQueryException | QueryEvaluationException ex) {
             throw new ARQException(ex);
         }
     }

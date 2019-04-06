@@ -12,14 +12,14 @@ import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
-import org.apache.jena.shared.JenaException;
-import org.apache.jena.shared.PrefixMapping;
-import org.apache.jena.sparql.core.DatasetPrefixStorage;
-import org.apache.jena.sparql.graph.GraphPrefixesProjection;
-import org.openrdf.model.Namespace;
-import org.openrdf.repository.RepositoryConnection;
-import org.openrdf.repository.RepositoryException;
-import org.openrdf.repository.RepositoryResult;
+import com.hp.hpl.jena.shared.JenaException;
+import com.hp.hpl.jena.shared.PrefixMapping;
+import com.hp.hpl.jena.sparql.core.DatasetPrefixStorage;
+import com.hp.hpl.jena.sparql.graph.GraphPrefixesProjection;
+import org.eclipse.rdf4j.model.Namespace;
+import org.eclipse.rdf4j.repository.RepositoryConnection;
+import org.eclipse.rdf4j.repository.RepositoryException;
+import org.eclipse.rdf4j.repository.RepositoryResult;
 
 public class JenaSesameDatasetPrefixStorage implements DatasetPrefixStorage {
     // Only one prefix mapping for the whole repository.
@@ -130,16 +130,6 @@ public class JenaSesameDatasetPrefixStorage implements DatasetPrefixStorage {
     public void removeFromPrefixMap(String graphName, String prefix) {
         try {
             connection.removeNamespace(prefix);
-        }
-        catch (RepositoryException ex) {
-            throw new JenaException(ex);
-        }
-    }
-
-    @Override
-    public void removeAllFromPrefixMap(String graphName) {
-        try {
-            connection.clearNamespaces();
         }
         catch (RepositoryException ex) {
             throw new JenaException(ex);
